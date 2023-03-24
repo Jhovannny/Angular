@@ -1,0 +1,34 @@
+<div class="container">
+  <br />
+  <h4>
+    {{ pais[0].name.common }}
+  </h4>
+  <img [src]="pais[0].flags.png" alt="" />
+  <br />
+  <br />
+  <p>
+    <strong>Capital: </strong>
+    {{ pais[0].capital }}
+  </p>
+
+  <p>
+    <strong>Subregion: </strong>
+    {{ pais[0].subregion }}
+  </p>
+
+  <p>
+    <strong>Population: </strong>
+    {{ pais[0].population }}
+  </p>
+
+  <div class="alert alert-primary" role="alert">
+    <ng-container *ngIf="pais[0].independent">
+      <strong>Independiente</strong>
+    </ng-container>
+    <ng-container *ngIf="!pais[0].independent">
+      <strong>No es independiente</strong>
+    </ng-container>
+  </div>
+
+  <button class="btn btn-danger" routerLink="/paises">Regresar</button>
+</div>

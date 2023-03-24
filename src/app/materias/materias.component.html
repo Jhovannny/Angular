@@ -1,0 +1,30 @@
+<!-- <p>materias works!</p> -->
+<div class="container">
+  <br />
+  <div class="row">
+    <div class="col-4">
+      <h3>Materia del cuatrimestre {{ semestre }}</h3>
+      <br />
+      <label for="cuatrimestre">Cuatrimestre</label>
+      <select
+        class="form-control"
+        id="cuatrimestre"
+        [(ngModel)]="semestre"
+        (ngModelChange)="getSemestre($event)"
+      >
+        <option
+          *ngFor="let semestre of materias"
+          [ngValue]="semestre.cuatrimestre"
+        >
+          {{ semestre.cuatrimestre }}
+        </option>
+      </select>
+    </div>
+    <div class="col-4" *ngFor="let materia of materias">
+      <app-materia
+        [materia]="materia"
+        [hidden]="materia.cuatrimestre != semestre"
+      ></app-materia>
+    </div>
+  </div>
+</div>

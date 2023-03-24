@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Angular</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bstarget="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      ariaexpanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/directivas']"
+            routerLinkActive="active"
+            >Directivas</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/materias']"
+            routerLinkActive="active"
+            >Mis Materias</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/nuevoUsuario']"
+            routerLinkActive="active"
+            >Nuevo Usuario</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/paises']" routerLinkActive="active">Paises</a>
+        </li>
+      </ul>
+      <div class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Buscar"
+          arialabel="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </div>
+    </div>
+  </div>
+</nav>

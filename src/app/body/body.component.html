@@ -1,0 +1,61 @@
+<!-- <div class="container">
+  <div class="row">
+    <br />
+    <div class="col-sm">
+      <h2>*ngif</h2>
+      <div class="alert alert-primary" role="alert" *ngIf="mostrarValor">
+        Variable mostrarMensaje con valor a true
+      </div>
+      <div class="alert alert-secondary" role="alert" *ngIf="!mostrarValor">
+        Variable mostrarMensaje con valor a false
+      </div>
+    </div>
+    <div class="col-sm">
+      <h2>*ngFor</h2>
+      <div>
+        <ul
+          class="list-group"
+          *ngFor="let materia of materias; first as isFirst"
+        >
+          <li
+            class="list-group-item"
+            [ngClass]="isFirst ? 'list-group-item active' : 'list-group-item'"
+          >
+            {{ materia }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm">
+      <h2>*ngSwitch</h2>
+      <container-element [ngSwitch]="contador % 2">
+        <div class="card" *ngSwitchCase="0">
+          <div class="card-body">Numero par {{ contador }}</div>
+        </div>
+
+        <div class="card" *ngSwitchCase="1">
+          <div class="card-body">Numero inpar {{ contador }}</div>
+        </div>
+      </container-element>
+
+      <button
+        type="button"
+        class="btn btn-dark"
+        (click)="contador = contador + 1"
+      >
+        Incrementar contador
+      </button>
+    </div>
+  </div>
+  <button
+    type="button"
+    class="btn btn-dark"
+    (click)="mostrarValor = !mostrarValor"
+  >
+    Cambiar de mensaje
+  </button>
+</div> -->
+
+<div class="alert alert-ligth" role="alert">
+  <h1>{{ mensaje }}</h1>
+</div>

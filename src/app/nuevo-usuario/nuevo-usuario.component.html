@@ -1,0 +1,69 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="validationDefault01" class="form-label">
+        Nombre:
+        <input
+          type="text"
+          formControlName="nombre"
+          class="form-control"
+          [class]="getFormato('nombre')"
+          id="validationDefault01"
+        />
+      </label>
+      <div class="invalid-feedback">
+        {{ getError("nombre") }}
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="validationDefault02" class="form-label">
+        Apellido:
+        <input
+          type="text"
+          formControlName="apellido"
+          class="form-control"
+          [class]="getFormato('apellido')"
+          id="validationDefault02"
+        />
+      </label>
+      <div class="invalid-feedback">
+        {{ getError("apellido") }}
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="validationDefault03" class="form-label">
+        Email:
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control"
+          [class]="getFormato('email')"
+          id="validationDefault03"
+        />
+      </label>
+      <div class="invalid-feedback">
+        {{ getError("email") }}
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="validationDefault04" class="form-label">
+        Género:
+        <select
+          formControlName="genero"
+          class="form-select"
+          id="validationDefault04"
+        >
+          <option value="">>-- Seleccione --<</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+          <option value="otro">Otro</option>
+        </select>
+      </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
